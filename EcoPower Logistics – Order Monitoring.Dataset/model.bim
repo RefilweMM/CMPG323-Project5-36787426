@@ -560,6 +560,20 @@
           }
         ],
         "lineageTag": "e2f6a4db-74b6-4d7b-9deb-18dc1addd454",
+        "measures": [
+          {
+            "name": "TotalOrders",
+            "expression": "COUNT('Order Details'[OrderDetailsID])",
+            "formatString": "0",
+            "lineageTag": "139b5271-dcfe-410d-8dab-c375958f04d7"
+          },
+          {
+            "name": "Target",
+            "expression": "50",
+            "formatString": "0",
+            "lineageTag": "1d48f634-3ba3-4a93-9777-d33509f1784f"
+          }
+        ],
         "partitions": [
           {
             "name": "Orders",
@@ -575,7 +589,12 @@
                 "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Removed Duplicates\",{{\"OrderId\", Int64.Type}}),",
                 "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type1\",{\"Column5\"}),",
                 "    #\"Removed Blank Rows\" = Table.SelectRows(#\"Removed Columns\", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {\"\", null}))),",
-                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Removed Blank Rows\",{{\"OrderDate\", type date}}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Blank Rows\",\"10/06/20923\",#date(2023, 10, 6),Replacer.ReplaceValue,{\"OrderDate\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",#date(2023, 3, 1),null,Replacer.ReplaceValue,{\"OrderDate\"}),",
+                "    #\"Removed Blank Rows2\" = Table.SelectRows(#\"Replaced Value1\", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {\"\", null}))),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Removed Blank Rows2\",null,#date(2023, 3, 1),Replacer.ReplaceValue,{\"OrderDate\"}),",
+                "    #\"Changed Type3\" = Table.TransformColumnTypes(#\"Replaced Value2\",{{\"OrderDate\", type date}}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Changed Type3\",{{\"OrderDate\", type date}}),",
                 "    #\"Removed Blank Rows1\" = Table.SelectRows(#\"Changed Type2\", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {\"\", null}))),",
                 "    #\"Removed Errors\" = Table.RemoveRowsWithErrors(#\"Removed Blank Rows1\", {\"OrderDate\"}),",
                 "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Errors\", each ([OrderId] <> null))",
