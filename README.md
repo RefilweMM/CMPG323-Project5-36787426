@@ -1,4 +1,8 @@
 # CMPG323-Project5-36787426
+# Introduction
+For this project, we were suppsoed to create a report beased on the excel sheet they gave us. We also had to connect to multiple sources.
+Here is the report I created.
+
 # References
 <ul>
 <li><p><a href="https://docs.microsoft.com/en-us/learn/modules/introduction-power-bi/">Introduction to Power BI</a></p></li>
