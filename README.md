@@ -1,7 +1,44 @@
 # CMPG323-Project5-36787426
 # Introduction
 For this project, we were suppsoed to create a report beased on the excel sheet they gave us. We also had to connect to multiple sources.
+# How to use my visualization
 Here is the report I created.
+I published it to Power BI service, therefore you can access it using this link: https://app.powerbi.com/groups/b7bcc7be-d4d9-4fbb-ac73-7cf839307610/reports/b3ece098-63c0-41d6-a6d1-9341aebb8a05/ReportSection708f0e4567f17d07637d?experience=power-bi
+Here's proof of the publish, and you'll see it redirects you to the report in Power BI when you click on the link.
+</br>
+<img src="proof of publish.png" width="1024" height="572" alt="Theme"></br>
+</br>
+# How to use my visualization
+Upon opening the report, you will see tabs on the right named: Order Monitoring, Customer Monitoring, Product Monitoring, and High level Metrics.
+
+## 1. High Level Metrics:
+To view the High Level Metrics page, click on High Level Metrics tab on the left, you'l bee greeted with this page.
+</br>
+<img src="high level metric.png" width="1024" height="572" alt="Theme"></br>
+</br>
+You can filter the report according to the ProductName, and the visuals will be adjusted accordingly.
+
+## 2. Order Monitoring:
+To view the Order Monitoring page, click on Order Monitoring tab on the left, you'l bee greeted with this page.
+</br>
+<img src="orderMonitoring.png" width="1024" height="572" alt="Theme"></br>
+</br>
+You can filter the report according to the ProductName as well as OrderID, and the visuals will be adjusted accordingly.
+
+## 3. Product Monitoring:
+To view the Product Monitoring page, click on Product Monitoring tab on the left, you'l bee greeted with this page.
+</br>
+<img src="productMonitoring.png" width="1024" height="572" alt="Theme"></br>
+</br>
+You can filter the report according to the ProductName as well as Category and UnitsInStock, and the visuals will be adjusted accordingly.
+
+## 3. Customer Monitoring:
+To view the Customer Monitoring page, click on Customer Monitoring tab on the left, you'l bee greeted with this page.
+</br>
+<img src="customerMontioring.png" width="1024" height="572" alt="Theme"></br>
+</br>
+You can filter the report according to the ProductName as well as CustomerTitle, and the visuals will be adjusted accordingly.
+
 
 # References
 <ul>
