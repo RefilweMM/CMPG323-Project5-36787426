@@ -1,6 +1,8 @@
 # CMPG323-Project5-36787426
 # Introduction
 For this project, we were suppsoed to create a report beased on the excel sheet they gave us. We also had to connect to multiple sources.
+
+> My data sources are from the excel sheet they posted on eFundi, as well as my API from project 2
 # How to use my visualization
 Here is the report I created.
 I published it to Power BI service, therefore you can access it using this link: https://app.powerbi.com/groups/b7bcc7be-d4d9-4fbb-ac73-7cf839307610/reports/b3ece098-63c0-41d6-a6d1-9341aebb8a05/ReportSection708f0e4567f17d07637d?experience=power-bi
